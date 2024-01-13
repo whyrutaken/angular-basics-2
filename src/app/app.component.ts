@@ -3,8 +3,21 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'basics-assignment-2-start';
+  username = "";
+
+  isEmpty() {
+    if (this.username === ""){
+      return true;
+    } else {
+      return false;
+    }
+  }
+  resetUsername() {
+    this.username = "";
+  }
+
+  
 }
